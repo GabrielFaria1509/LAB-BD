@@ -1,14 +1,14 @@
-DROP DATABASE  IF EXISTS streaming_db;
-CREATE DATABASE streaming_db;
-USE streaming_db;
+DROP DATABASE  IF EXISTS streaming_db;  ##confere se existe já esse banco de bados
+CREATE DATABASE streaming_db;  ##cria se não existe
+USE streaming_db;  ##uso bd
 
 SET SQL_SAFE_UPDATES = 0;
 
 CREATE TABLE Filme(
 titulo VARCHAR(20),
 genero VARCHAR(30),
-id INT AUTO_INCREMENT PRIMARY KEY,
-ano_lancamento INT NOT NULL  
+id INT AUTO_INCREMENT PRIMARY KEY, ##valor primário/único e aumementa automático
+ano_lancamento INT NOT NULL  ##não pode ser vazio ##precisa ter 
 );
 
 ALTER TABLE Filme ADD classificacao_etaria INT;  ##coloca nova coluna
